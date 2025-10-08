@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoColeta - App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <header class="app-header">
+        <div class="user-info">
+            <span class="user-avatar">👤</span>
+            <div>
+                <h2>EcoReciclador</h2>
+                <p>Nível: Reciclador Iniciante</p>
+            </div>
+        </div>
+        <div class="eco-balance">
+            <span>🪙</span>
+            <strong>150 EcoCoins</strong>
+        </div>
+    </header>
+
+    <!-- PRINCIPAL -->
+    <main class="main-content">
+        <!-- MAPA -->
+        <div id="map-screen" class="screen active">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar pontos de coleta...">
+                    <button>🔍</button>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <button class="action-btn primary" onclick="showDiscardModal()">
+                    📝 Registrar Descarte
+                </button>
+                <button class="action-btn secondary" onclick="showScreen('rewards-screen')">
+                    🎁 Ver Recompensas
+                </button>
+            </div>
+
+            <div class="map-preview">
+                <h3>🗺️ Pontos Próximos</h3>
+                <div class="points-list">
+                    <div class="point-item">
+                        <span>🛒</span>
+                        <div>
+                            <strong>Supermercado Verde</strong>
+                            <p>2km • Aberto até 18h</p>
+                        </div>
+                        <button class="nav-btn">→</button>
+                    </div>
+                    <div class="point-item">
+                        <span>⛽</span>
+                        <div>
+                            <strong>Posto EcoFuel</strong>
+                            <p>3km • 24 horas</p>
+                        </div>
+                        <button class="nav-btn">→</button>
+                    </div>
+                    <div class="point-item">
+                        <span>💊</span>
+                        <div>
+                            <strong>Farmácia Natural</strong>
+                            <p>1.5km • Aberto até 22h</p>
+                        </div>
+                        <button class="nav-btn">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>📊</span>
+                    <strong>28</strong>
+                    <p>Itens Reciclados</p>
+                </div>
+                <div class="stat-card">
+                    <span>🌍</span>
+                    <strong>15kg</strong>
+                    <p>CO₂ Economizado</p>
+                </div>
+                <div class="stat-card">
+                    <span>💰</span>
+                    <strong>R$ 45</strong>
+                    <p>Em Recompensas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOJA -->
+        <div id="rewards-screen" class="screen">
+            <div class="screen-header">
+                <h2>🏪 Loja EcoCoins</h2>
+                <div class="balance-display">
+                    <span>🪙 150 EcoCoins</span>
+                </div>
+            </div>
+
+            <div class="rewards-grid">
+                <div class="reward-card">
+                    <div class="reward-icon">⛽</div>
+                    <div class="reward-details">
+                        <h3>5% Desconto</h3>
+                        <p>Posto EcoFuel</p>
+                        <div class="reward-price">
+                            <span>50 EcoCoins</span>
+                            <button class="redeem-btn">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reward-card">
+                    <div class="reward-icon">🛒</div>
+                    <div class="reward-details">
+                        <h3>10% Cashback</h3>
+                        <p>Supermercado Verde</p>
+                        <div class="reward-price">
+                            <span>100 EcoCoins</span>
+                            <button class="redeem-btn">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reward-card">
+                    <div class="reward-icon">💰</div>
+                    <div class="reward-details">
+                        <h3>R$ 10 Off</h3>
+                        <p>Farmácia Natural</p>
+                        <div class="reward-price">
+                            <span>80 EcoCoins</span>
+                            <button class="redeem-btn">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERFIL -->
+        <div id="profile-screen" class="screen">
+            <div class="screen-header">
+                <h2>👤 Meu Perfil</h2>
+            </div>
+
+            <div class="profile-stats">
+                <div class="profile-stat">
+                    <span>🥉 Nível</span>
+                    <strong>Reciclador Iniciante</strong>
+                </div>
+                <div class="profile-stat">
+                    <span>🪙 EcoCoins</span>
+                    <strong>150</strong>
+                </div>
+                <div class="profile-stat">
+                    <span>📅 Dias Ativo</span>
+                    <strong>15</strong>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h3>📈 Histórico Recente</h3>
+                <div class="history-list">
+                    <div class="history-item">
+                        <span>📄</span>
+                        <div>
+                            <strong>Papel - 2kg</strong>
+                            <p>+15 EcoCoins • Hoje</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <span>♻️</span>
+                        <div>
+                            <strong>Plástico - 3kg</strong>
+                            <p>+25 EcoCoins • Ontem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--NAVEGAÇÃO -->
+    <nav class="bottom-nav">
+        <button class="nav-btn active" onclick="showScreen('map-screen')">
+            <span>🗺️</span>
+            Mapa
+        </button>
+        <button class="nav-btn" onclick="showScreen('rewards-screen')">
+            <span>🏪</span>
+            Loja
+        </button>
+        <button class="nav-btn" onclick="showScreen('profile-screen')">
+            <span>👤</span>
+            Perfil
+        </button>
+    </nav>
+</div>
+
+<!--DESCARTE -->
+<div id="discard-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>📝 Registrar Descarte</h3>
+            <button class="close-btn" onclick="closeModal()">×</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Material</label>
+                <select>
+                    <option>♻️ Plástico (+25 EcoCoins/kg)</option>
+                    <option>📄 Papel (+15 EcoCoins/kg)</option>
+                    <option>🍷 Vidro (+20 EcoCoins/kg)</option>
+                    <option>⚙️ Metal (+30 EcoCoins/kg)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Quantidade (kg)</label>
+                <input type="number" value="1" min="0.1" step="0.1">
+            </div>
+            <div class="form-group">
+                <label>Local</label>
+                <select>
+                    <option>Supermercado Verde</option>
+                    <option>Posto EcoFuel</option>
+                    <option>Farmácia Natural</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-primary" onclick="confirmDiscard()">
+                ✅ Confirmar Descarte
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

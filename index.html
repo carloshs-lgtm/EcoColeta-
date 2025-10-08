@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoColeta - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="login-card">
+        <div class="logo">
+            <span>🌱</span>
+            <h1>EcoColeta</h1>
+            <p>Descarte consciente, recompensas reais</p>
+        </div>
+
+        <form class="login-form">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Senha</label>
+                <input type="password" placeholder="Sua senha" required>
+            </div>
+
+            <button type="button" class="login-btn" onclick="login()">
+                Entrar
+            </button>
+        </form>
+
+        <div class="login-footer">
+            <p>Não tem conta? <a href="#" onclick="showRegister()">Cadastre-se</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

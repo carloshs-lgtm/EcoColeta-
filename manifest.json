@@ -1,0 +1,27 @@
+{
+  "name": "EcoColeta - Descarte Consciente",
+  "short_name": "EcoColeta",
+  "description": "App de descarte seletivo com recompensas - ODS 12",
+  "start_url": "/ecocoleta-app/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2E7D32",
+  "orientation": "portrait",
+  "scope": "/ecocoleta-app/",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle", "utilities"],
+  "lang": "pt-BR"
+}
